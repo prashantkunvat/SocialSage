@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Instagram</title>
+		<link rel="stylesheet" href="insta.css" />
+		<link rel="stylesheet" href="utils.css" />
+		<link rel="stylesheet" href="animation.css" />
+		<link rel="stylesheet" href="m-queries.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="left">
+					<img src="img/logo.png" alt="Logo" />
+				</div>
+				<div class="center">
+					<ul id="header-list">
+						<li><a href="../youtube/index.html">Youtube</a></li>
+						<li><a href="../facebook/index.html">Facebook</a></li>
+						<li><a href="../spotify/index.html">Spotify</a></li>
+						<li><a href="#">Twitter</a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<button id="log-in">Login</button>
+					<button id="sign-up">Sign up</button>
+				</div>
+				<div class="hamburger" onclick="toggleMenu()">
+					<svg
+						class="ham hamRotate ham8"
+						viewBox="0 0 100 100"
+						width="80"
+						onclick="this.classList.toggle('active')"
+					>
+						<path
+							class="line top"
+							d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+						/>
+						<path class="line middle" d="m 30,50 h 40" />
+						<path
+							class="line bottom"
+							d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+						/>
+					</svg>
+				</div>
+			</header>
+			<div class="mobile-menu">
+				<ul id="mobile-header-list">
+					<li><a href="../youtube/index.html">Youtube</a></li>
+					<li><a href="../facebook/index.html">Facebook</a></li>
+					<li><a href="../spotify/index.html">Spotify</a></li>
+					<li><a href="#">Twitter</a></li>
+				</ul>
+			</div>
+			<main>
+				<div class="heading">
+					<h1>Instagram Video Downloader</h1>
+				</div>
+				<div class="btn-group"></div>
+				<span
+					>Paste the Instagram video URL and instantly download videos for
+					offline viewing.</span
+				>
+				<div class="input-container">
+					<input type="text" id="urlInput" placeholder="Enter Instagram URL" />
+					<button id="fetch-button" onclick="fetchVideo()">Download</button>
+				</div>
+				<div class="display">
+					<div id="loading-animation" class="loader" style="display: none">
+						Loading...
+					</div>
+					<div id="videoContainer"></div>
+					<button
+						class="fill"
+						id="downloadBtn"
+						style="display: none"
+						onclick="downloadVideo()"
+					>
+						Download
+					</button>
+				</div>
+			</main>
+			<div class="features">
+				<div class="f-h">
+					<h1>
+						High-Speed Downloads - Save Instagram Videos to Your Device in Less
+						Than a Minute
+					</h1>
+				</div>
+				<div class="f-content">
+					<div class="f">
+						<h3>🌟Accessible on all devices</h3>
+						<div class="span">
+							<span
+								>Access our tool on Windows, macOS, Android, iOS and
+								tablets.</span
+							>
+						</div>
+					</div>
+					<div class="f">
+						<h3>🌟No sign-up required</h3>
+						<div class="span">
+							<span>Use our tool without any sign-up hassles, for free.</span>
+						</div>
+					</div>
+					<div class="f">
+						<h3>🌟Consistent quality downloads</h3>
+						<div class="span">
+							<span
+								>Get your videos in 1280 x 720p, 1920 x 1080p or 4K
+								resolution.</span
+							>
+						</div>
+					</div>
+					<div class="f">
+						<h3>🌟No watermarks, no ads</h3>
+						<div class="span">
+							<span
+								>Download your videos without any pesky ads or watermarks
+								attached.</span
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="knowmore">
+				<div class="km-title">
+					<h1>How to Download Instagram Videos Using Supersage Tool?</h1>
+				</div>
+				<div class="km-box">
+					<div class="km-item">
+						<div class="num-box">
+							<div class="km-num">1</div>
+						</div>
+						<div class="itm-info">
+							<h3>Enter the Link</h3>
+							<p>
+								Paste your desired Instagram video URL. No fuss, just a
+								straightforward copy-paste.
+							</p>
+						</div>
+					</div>
+					<div class="km-item">
+						<div class="num-box">
+							<div class="km-num">2</div>
+						</div>
+						<div class="itm-info">
+							<h3>Preview the Video</h3>
+							<p>Watch the UI showcase your video before the download.</p>
+						</div>
+					</div>
+					<div class="km-item">
+						<div class="num-box">
+							<div class="km-num">3</div>
+						</div>
+						<div class="itm-info">
+							<h3>Hit Download</h3>
+							<p>
+								One click and the video is yours. Ready for offline viewing,
+								editing, or sharing.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="rich-text">
+				<h2>Benefits of Supersage’s Instagram Video Downloader</h2>
+				<p>
+					Supersage is the best free tool to download Instagram videos easily
+					for free. Supersage offers an effortless video downloading experience:
+				</p>
+				<h3>1. Unlimited Free Downloads</h3>
+				<p>
+					You can download unlimited videos for free with no strings attached –
+					no sign-up, no subscription, no payments.
+				</p>
+				<h3>2. High-quality video downloads</h3>
+				<p>
+					Our platform allows you to download videos of various resolutions,
+					including 1080p, 2k, and even 4k. This means you can enjoy your
+					content in the highest quality possible.
+				</p>
+				<h3>3. High Download Speeds</h3>
+				<p>You can download any video in less than a minute.</p>
+				<h3>4. Simple Interface</h3>
+				<p>
+					Just paste the link to the Instagram video you want to download, and
+					our tool will handle the rest.
+				</p>
+				<h3>5. Works Across All Devices and Platforms</h3>
+				<p>
+					Use our downloader on any device with an internet connection,
+					including smartphones, tablets, computers, and various Android, iOS,
+					and Windows platforms.
+				</p>
+				<h3>6. Multiple Device/Browser Support</h3>
+				<p>
+					Download content on any device, whether a PC, Desktop, tablet, iPhone,
+					or Android smartphone. Also accessible on Google Chrome, Mozilla
+					Firefox, Safari, Opera, and other browsers.
+				</p>
+
+				<h2>Unlimited Possibilities of Our Instagram Video Downloader</h2>
+				<ul>
+					<li>
+						You’re planning a long road trip with your friends to a remote
+						location without internet access. You want to create a playlist of
+						your favourite music videos or download movies from Instagram to
+						keep everyone entertained. Using our Instagram video downloader, you
+						can easily download unlimited videos for free.
+					</li>
+				</ul>
+				<ul>
+					<li>
+						As a student preparing for exams, you can download lecture
+						recordings, tutorial videos, and educational content from Instagram
+						whenever you have access to high-speed internet. This allows you to
+						disconnect from the internet, minimise distractions while studying
+						and improve productivity while also having access to videos.
+					</li>
+				</ul>
+				<ul>
+					<li>
+						You organized an event/webinar that was live on Instagram. Now you
+						want to repurpose them to your brand's social media channels like
+						Facebook, Instagram and LinkedIn or share them with your audience
+						via email or other channels. You can use our free tool to download
+						Instagram live videos and edit them to fit the needs of other
+						platforms.
+					</li>
+				</ul>
+				<h2>Download Instagram Videos For Free</h2>
+				<p>
+					Supersage’s Instagram video downloader aims to help people without
+					stable internet access to download and watch Instagram videos for
+					free. Though it is ​​acceptable to download videos for personal or
+					non-commercial use, it is essential to familiarize yourself with
+					Instagram's official Terms of Service and Community Guidelines to
+					understand the guidelines and policies regarding video usage,
+					copyright, and content distribution.
+				</p>
+			</div>
+			<!-- FOOTER SECTION -->
+
+			<footer class="new_footer_area bg_color">
+				<div class="new_footer_top">
+					<div class="footer-content">
+						<div class="contact">
+							<h3>Get In Touch!</h3>
+							<p>
+								If you have any inquiries or need further assistance, please do
+								not hesitate to get in touch with us.
+							</p>
+							<form action="https://api.web3forms.com/submit" method="POST">
+								<input
+									type="hidden"
+									name="access_key"
+									value="95d91e81-6d7d-41a0-bda4-7cb9315449b1"
+								/>
+								<input
+									class="email"
+									type="email"
+									name="email"
+									placeholder="Email"
+									required
+								/>
+								<textarea
+									class="message"
+									name="text"
+									id=""
+									cols=""
+									rows="	"
+									placeholder="Message"
+									required
+								></textarea>
+								<button class="send fill" type="submit">Submit</button>
+							</form>
+						</div>
+						<div class="buisness">
+							<h3>Buisness</h3>
+							<ul>
+								<li><a href="">instagram</a></li>
+								<li><a href="">linkdian</a></li>
+								<li><a href="">Spotify</a></li>
+								<li><a href="">Instagram</a></li>
+								<li><a href="">All In One</a></li>
+							</ul>
+						</div>
+						<div class="buisness">
+							<h3>Company</h3>
+							<ul>
+								<li><a href="">About Us</a></li>
+								<li><a href="">Contact</a></li>
+								<li><a href="">Brand</a></li>
+								<li><a href="">Press</a></li>
+							</ul>
+						</div>
+						<div class="socials">
+							<h3>Let's Connect!</h3>
+
+							<div class="social-container">
+								<a href="https://www.instagram.com/prashant_kunvat/">
+									<img class="social-size" src="img/social.png" alt="img" />
+								</a>
+								<a href="https://www.quora.com/profile/Prashant-Kunvat/">
+									<img class="social-size" src="img/quora.png" alt="img" />
+								</a>
+								<a href="https://github.com/prashantkunvat">
+									<img class="social-size" src="img/github.png" alt="img" />
+								</a>
+								<a href="https://www.linkedin.com/in/prashant-kuwat-45a993223/">
+									<img class="social-size" src="img/linkedin.png" alt="img" />
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer_bg">
+						<div class="footer_bg_one"></div>
+						<div class="footer_bg_two"></div>
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-lg-6 col-sm-7">
+								<p class="mb-0 f_400">
+									© PrashantKunvat.. 2024 All rights reserved.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="insta.js"></script>
+	</body>
+</html>
